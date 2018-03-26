@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
-    <label lang="de">Tabs in SW aus Plenty</label>
+    <label lang="de">Technische Daten Plenty -> Shopware</label>
 
     <version>1.0.0</version>
     <link>https://github.com/marcmanusch</link>
