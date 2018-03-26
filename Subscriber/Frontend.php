@@ -42,6 +42,8 @@ class Frontend implements SubscriberInterface
         $view->addTemplateDir($this->container->getParameter('paul_plenty_tabs.plugin_dir') . '/Resources/Views');
         $config = $this->container->get('shopware.plugin.config_reader')->getByPluginName('PaulPlentyTabs');
 
+        $active = $config['active'];
+        $view->assign('paulShowTechnicalTab', $active);
 
     }
 

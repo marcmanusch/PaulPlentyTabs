@@ -2,7 +2,7 @@
 
 
 {block name="frontend_detail_index_outer_tabs"}
-    {if $sArticle.plenty_connector_technical_description}
+    {if $sArticle.plenty_connector_technical_description && $paulShowTechnicalTab}
         <div class="tab--container paul--plenty-tabs--container" data-tab-id="plenty-tabs">
             {block name="frontend_detail_index_tabs_download_inner"}
                 <div class="tab--header">
