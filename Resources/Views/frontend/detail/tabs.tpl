@@ -3,7 +3,7 @@
 
 {block name="frontend_detail_tabs_description"}
     {$smarty.block.parent}
-    {if $sArticle.plenty_connector_technical_description}
+    {if $sArticle.plenty_connector_technical_description && $paulShowTechnicalTab}
         <a href="#" class="tab--link" title="technicaldata">
             {s name="paulTechnicalData"}Technische Daten{/s}
         </a>
@@ -13,7 +13,7 @@
 {* downloads container *}
 {block name="frontend_detail_tabs_content_description"}
     {$smarty.block.parent}
-    {if $sArticle.plenty_connector_technical_description}
+    {if $sArticle.plenty_connector_technical_description && $paulShowTechnicalTab}
         <div class="tab--container">
 
             {* title *}
