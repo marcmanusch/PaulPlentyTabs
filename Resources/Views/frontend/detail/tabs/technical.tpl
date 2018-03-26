@@ -8,15 +8,14 @@
 </div>
 
 {* content *}
-<div class="content--description"">
+<div class="content--description">
 
     {* headline *}
     <div class="content--title download--headline">
-        {s name="paulPlentyTechHeadline"}Technische Daten{/s}
+        {s name="DetailDownloadsHeader"}Technische Daten für{/s} {$sArticle.ordernumber}
     </div>
 
-    {* technische Daten *}
+    {* technical data *}
     {$sArticle.plenty_connector_technical_description}
-
 
 </div>

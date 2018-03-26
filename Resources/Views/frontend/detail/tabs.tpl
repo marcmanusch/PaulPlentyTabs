@@ -1,49 +1,32 @@
-{extends file='parent:frontend/detail/tabs.tpl'}
+{extends file="parent:frontend/detail/tabs.tpl"}
 
-{block name="frontend_detail_tabs_navigation_inner"}
+
+{block name="frontend_detail_tabs_description"}
     {$smarty.block.parent}
+    {if $sArticle.plenty_connector_technical_description}
+        <a href="#" class="tab--link" title="technicaldata">
+            {s name="paulTechnicalData"}Technische Daten{/s}
+        </a>
+    {/if}
+{/block}
 
-    {* technical tab *}
-    {block name="frontend_detail_tabs_technical"}
-        <a href="#" class="tab--link" title="{s name='DetailTabsTechnical'}{/s}" data-tabName="technical">{s name='DetailTabsTechnical'}Technische Daten{/s}</a>
-    {/block}
+{* downloads container *}
+{block name="frontend_detail_tabs_content_description"}
+    {$smarty.block.parent}
+    {if $sArticle.plenty_connector_technical_description}
+        <div class="tab--container">
 
-    {block name="frontend_detail_tabs_content_inner"}
-        {* technical container *}
-        {block name="frontend_detail_tabs_content_technical"}
-            <div class="tab--container">
-                {block name="frontend_detail_tabs_content_technical_inner"}
-
-                    {* technical title *}
-                    {block name="frontend_detail_tabs_content_technical_title"}
-                        <div class="tab--header">
-                            {block name="frontend_detail_tabs_content_technical_title_inner"}
-                                <a href="#" class="tab--title" title="{s name='DetailTabsTechnical'Technische Daten}{/s}">{s name='DetailTabsTechnical'}Technische Daten{/s}</a>
-                            {/block}
-                        </div>
-                    {/block}
-
-                    {* technical preview *}
-                    {block name="frontend_detail_tabs_technical_preview"}
-                        <div class="tab--preview">
-                            {block name="frontend_detail_tabs_content_technical_preview_inner"}
-                                {$sArticle.plenty_connector_technical_description|strip_tags|truncate:100:'...'}<a href="#" class="tab--link" title="{s name="PreviewTextMore"}{/s}">{s name="PreviewTextMore"}{/s}</a>
-                            {/block}
-                        </div>
-                    {/block}
-
-                    {* technical content *}
-                    {block name="frontend_detail_tabs_content_technical_description"}
-                        <div class="tab--content">
-                            {block name="frontend_detail_tabs_content_technical_description_inner"}
-                                {include file="frontend/detail/tabs/technical.tpl"}
-                            {/block}
-                        </div>
-                    {/block}
-
-                {/block}
+            {* title *}
+            <div class="tab--header">
+                <a href="#" class="tab--title" title="Technische Daten">{s name="paulTechnicalDataTitle"}Technische Daten{/s}</a>
             </div>
-        {/block}
-    {/block}
 
+
+            {* content *}
+            <div class="tab--content technical--tab-content">
+                {include file="frontend/detail/tabs/technical.tpl"}
+            </div>
+
+        </div>
+    {/if}
 {/block}
